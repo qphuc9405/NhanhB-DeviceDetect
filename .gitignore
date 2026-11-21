@@ -1,0 +1,14 @@
+.venv/
+node_modules/
+__pycache__/
+.pytest_cache/
+.env
+firmware/*/build/
+firmware/*/sdkconfig*
+!firmware/*/sdkconfig.defaults
+!firmware/*/sdkconfig.fixed
+frontend/dist/
+data/runtime/
+data/results/
+firmware/*/managed_components/
+firmware/*/dependencies.lock

@@ -1,0 +1,21 @@
+{
+  "idf": "5.5.4",
+  "idf_commit": "735507283d5b2f9fb363a1901172dbd9e847945d",
+  "target": "esp32c3",
+  "toolchain": "riscv32-esp-elf 14.2.0 / esp-14.2.0_20260121",
+  "build_command": "idf.py -DCOMPONENTS=main build",
+  "component_manager": 0,
+  "cmake": "3.30.9",
+  "hardware_tested": false,
+  "binary_bytes": 757488,
+  "binary_sha256": "634a246bc31184ec71b4d2ed0632c9ca12bba8510636d8d7ddd3aef8539e240c",
+  "source_sha256": "c400f7d7dfc0059607e952d76ce1e9498bf883d7d6aa51b0b62f1ffd961254c9",
+  "settings": [
+    "CONFIG_PROBE_COUNTRY=\"VN\"",
+    "CONFIG_PROBE_HOPPING=y",
+    "CONFIG_PROBE_LAST_CHANNEL=13",
+    "CONFIG_PROBE_FIXED_CHANNEL=6",
+    "CONFIG_PROBE_DWELL_MS=3000",
+    "CONFIG_ESP_CONSOLE_UART_BAUDRATE=921600"
+  ]
+}

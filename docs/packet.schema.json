@@ -1,0 +1,284 @@
+{
+  "$defs": {
+    "Channel": {
+      "properties": {
+        "v": {
+          "const": 1,
+          "title": "V",
+          "type": "integer"
+        },
+        "type": {
+          "const": "channel",
+          "title": "Type",
+          "type": "string"
+        },
+        "node": {
+          "const": "sniffer",
+          "title": "Node",
+          "type": "string"
+        },
+        "boot_id": {
+          "maxLength": 40,
+          "minLength": 1,
+          "title": "Boot Id",
+          "type": "string"
+        },
+        "ts_us": {
+          "minimum": 0,
+          "title": "Ts Us",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 0,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "channel": {
+          "maximum": 13,
+          "minimum": 1,
+          "title": "Channel",
+          "type": "integer"
+        },
+        "dwell_ms": {
+          "maximum": 10000,
+          "minimum": 100,
+          "title": "Dwell Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "v",
+        "type",
+        "node",
+        "boot_id",
+        "ts_us",
+        "seq",
+        "channel",
+        "dwell_ms"
+      ],
+      "title": "Channel",
+      "type": "object"
+    },
+    "Probe": {
+      "properties": {
+        "v": {
+          "const": 1,
+          "title": "V",
+          "type": "integer"
+        },
+        "type": {
+          "const": "probe",
+          "title": "Type",
+          "type": "string"
+        },
+        "node": {
+          "const": "sniffer",
+          "title": "Node",
+          "type": "string"
+        },
+        "boot_id": {
+          "maxLength": 40,
+          "minLength": 1,
+          "title": "Boot Id",
+          "type": "string"
+        },
+        "ts_us": {
+          "minimum": 0,
+          "title": "Ts Us",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 0,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "source_mac": {
+          "title": "Source Mac",
+          "type": "string"
+        },
+        "rssi": {
+          "maximum": 0,
+          "minimum": -127,
+          "title": "Rssi",
+          "type": "integer"
+        },
+        "channel": {
+          "maximum": 13,
+          "minimum": 1,
+          "title": "Channel",
+          "type": "integer"
+        },
+        "frame_seq": {
+          "maximum": 4095,
+          "minimum": 0,
+          "title": "Frame Seq",
+          "type": "integer"
+        },
+        "retry": {
+          "default": false,
+          "title": "Retry",
+          "type": "boolean"
+        },
+        "ie": {
+          "default": "",
+          "maxLength": 200,
+          "pattern": "^(\\d{1,3}:\\d{1,3}(,\\d{1,3}:\\d{1,3})*)?$",
+          "title": "Ie",
+          "type": "string"
+        }
+      },
+      "required": [
+        "v",
+        "type",
+        "node",
+        "boot_id",
+        "ts_us",
+        "seq",
+        "source_mac",
+        "rssi",
+        "channel",
+        "frame_seq"
+      ],
+      "title": "Probe",
+      "type": "object"
+    },
+    "Status": {
+      "properties": {
+        "v": {
+          "const": 1,
+          "title": "V",
+          "type": "integer"
+        },
+        "type": {
+          "const": "status",
+          "title": "Type",
+          "type": "string"
+        },
+        "node": {
+          "const": "sniffer",
+          "title": "Node",
+          "type": "string"
+        },
+        "boot_id": {
+          "maxLength": 40,
+          "minLength": 1,
+          "title": "Boot Id",
+          "type": "string"
+        },
+        "ts_us": {
+          "minimum": 0,
+          "title": "Ts Us",
+          "type": "integer"
+        },
+        "seq": {
+          "minimum": 0,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "capture_active": {
+          "title": "Capture Active",
+          "type": "boolean"
+        },
+        "own_mac": {
+          "title": "Own Mac",
+          "type": "string"
+        },
+        "channel": {
+          "maximum": 13,
+          "minimum": 1,
+          "title": "Channel",
+          "type": "integer"
+        },
+        "probe_seen": {
+          "minimum": 0,
+          "title": "Probe Seen",
+          "type": "integer"
+        },
+        "probe_dropped": {
+          "minimum": 0,
+          "title": "Probe Dropped",
+          "type": "integer"
+        },
+        "invalid": {
+          "minimum": 0,
+          "title": "Invalid",
+          "type": "integer"
+        },
+        "serial_errors": {
+          "minimum": 0,
+          "title": "Serial Errors",
+          "type": "integer"
+        },
+        "bytes_written": {
+          "minimum": 0,
+          "title": "Bytes Written",
+          "type": "integer"
+        },
+        "serial_baud": {
+          "const": 460800,
+          "title": "Serial Baud",
+          "type": "integer"
+        },
+        "sniffer_enabled": {
+          "title": "Sniffer Enabled",
+          "type": "boolean"
+        },
+        "scan_mode": {
+          "enum": [
+            "fixed",
+            "hopping"
+          ],
+          "title": "Scan Mode",
+          "type": "string"
+        },
+        "dwell_ms": {
+          "maximum": 10000,
+          "minimum": 100,
+          "title": "Dwell Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "v",
+        "type",
+        "node",
+        "boot_id",
+        "ts_us",
+        "seq",
+        "capture_active",
+        "own_mac",
+        "channel",
+        "probe_seen",
+        "probe_dropped",
+        "invalid",
+        "serial_errors",
+        "bytes_written",
+        "serial_baud",
+        "sniffer_enabled",
+        "scan_mode",
+        "dwell_ms"
+      ],
+      "title": "Status",
+      "type": "object"
+    }
+  },
+  "discriminator": {
+    "mapping": {
+      "channel": "#/$defs/Channel",
+      "probe": "#/$defs/Probe",
+      "status": "#/$defs/Status"
+    },
+    "propertyName": "type"
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/Probe"
+    },
+    {
+      "$ref": "#/$defs/Status"
+    },
+    {
+      "$ref": "#/$defs/Channel"
+    }
+  ]
+}

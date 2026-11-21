@@ -1,0 +1,39 @@
+{
+  "step_s": 1,
+  "max_cluster_aliases": 384,
+  "probe": {
+    "slot_s": 60,
+    "arrival_slots": 2,
+    "withdrawal_slots": 2,
+    "departure_slots": 3,
+    "rssi_min": -127,
+    "unique_window_s": 60,
+    "timeout_s": 120,
+    "confirm_window_s": 30,
+    "confirm_hits": 2,
+    "heartbeat_s": 5
+  },
+  "methods": [
+    "rssi_timeout",
+    "sherlock_mac",
+    "sherlock_cluster",
+    "proposed_30s",
+    "proposed_60s",
+    "proposed_room_30s",
+    "proposed_room_60s"
+  ],
+  "sherlock_variants": {
+    "retain_candidate": {
+      "slot_s": 60,
+      "arrival_slots": 2,
+      "withdrawal_slots": 3,
+      "departure_slots": 3
+    },
+    "short_slot": {
+      "slot_s": 30,
+      "arrival_slots": 2,
+      "withdrawal_slots": 2,
+      "departure_slots": 3
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "slot_s": 60.0,
+  "arrival_slots": 2,
+  "withdrawal_slots": 2,
+  "departure_slots": 3,
+  "rssi_min": -127,
+  "unique_window_s": 60.0,
+  "timeout_s": 120.0,
+  "confirm_window_s": 30.0,
+  "confirm_hits": 2,
+  "heartbeat_s": 5.0,
+  "max_sources": 2000,
+  "excluded_macs": []
+}

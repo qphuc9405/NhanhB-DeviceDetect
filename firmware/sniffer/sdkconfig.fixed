@@ -1,0 +1,5 @@
+# Nghe cố định kênh 6, dùng khi thu dữ liệu cho gom MAC theo IE (cần trọn đợt quét):
+#   idf.py -D SDKCONFIG_DEFAULTS="sdkconfig.defaults;sdkconfig.fixed" build
+# Xoá file sdkconfig trước nếu đã build bản nhảy kênh.
+CONFIG_PROBE_HOPPING=n
+CONFIG_PROBE_FIXED_CHANNEL=6

@@ -1,0 +1,20 @@
+menu "Probe research sniffer"
+config PROBE_COUNTRY
+    string "Country code (e.g. VN; local channel policy)"
+    default "VN"
+config PROBE_HOPPING
+    bool "Hop channels (otherwise fixed channel)"
+    default y
+config PROBE_LAST_CHANNEL
+    int "Last channel (configure for local country policy)"
+    range 1 13
+    default 13
+config PROBE_FIXED_CHANNEL
+    int "Fixed / first channel"
+    range 1 11
+    default 6
+config PROBE_DWELL_MS
+    int "Channel dwell milliseconds"
+    range 100 10000
+    default 3000
+endmenu

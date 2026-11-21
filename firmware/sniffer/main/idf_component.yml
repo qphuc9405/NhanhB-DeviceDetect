@@ -1,0 +1,3 @@
+dependencies:
+  # ESP-IDF 6.x đã bỏ component json khỏi IDF, lấy cJSON từ Component Registry
+  espressif/cjson: "^1.7"
